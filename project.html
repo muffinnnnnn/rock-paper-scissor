@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+   
+
+ function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        console.log("its a tie!!")
+    }
+    else if (playerSelection == "rock"){ 
+        if (computerSelection == "scissor") {
+        console.log("congratulation the player win !")
+    
+        }else{
+        console.log("sorry try again !!")
+        }
+    }
+    else if (playerSelection == "scissor"){
+        if (computerSelection == "paper") {
+        console.log("congratulation the player win !")
+
+        }else{
+        console.log("sorry try again !!")
+        } 
+    }
+    else if (playerSelection == "paper") {
+         if (computerSelection == "rock") {
+         console.log("congratulation the player win !")
+        
+        }else {
+        console.log("sorry try again !!")
+        } 
+    }
+   
+ }
+
+ const gameChoice = ["rock","paper","scissor"];
+ const playerSelection = "rock";
+ var computerSelection = gameChoice[Math.floor(Math.random() * gameChoice.length)]; 
+ computerSelection = computerSelection.toLowercase();
+ playerSelection = playerSelection.toLowerCase();
+ console.log(playRound(playerSelection));
+
+ playRound();
+ 
+ function game() {
+    for (let i = 0; i < 5; i++) {
+
+    }
+ }
+
+    </script>
+</body>
+
+</html>
