@@ -1,66 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="project.css">
-    <title>Document</title>
+    <title>Rock Paper Scissor</title>
+    <link rel="icon" href="image/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <h1>Lets Play Rock Paper Scissor</h1>
+    <p class="weaponText">Choose Your Weapon</p>
+    <div class="weaponContainer">
+        <div class="weapon rock" id="rock"></div>
+        <div class="weapon paper" id="paper"></div>
+        <div class="weapon scissor" id="scissor"></div>
+    </div>
+
+    <div class="boxContainer">
+
+        <div class="playerContainer">
+            <div class="boxTextPlayer">Player</div>
+            <div class="playerBox"></div>
+            <div class="playerScore"></div>
+        </div>
+        <div class="computerContainer">
+            <div class="boxTextComputer">Computer</div>
+            <div class=" computerBox"></div>
+            <div class="computerScore"></div>
+        </div>
+    </div>
 
 
-    <script>
-   
-
- function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        console.log("its a tie!!")
-    }
-    else if (playerSelection == "rock"){ 
-        if (computerSelection == "scissor") {
-        console.log("congratulation the player win !")
-    
-        }else{
-        console.log("sorry try again !!")
-        }
-    }
-    else if (playerSelection == "scissor"){
-        if (computerSelection == "paper") {
-        console.log("congratulation the player win !")
-
-        }else{
-        console.log("sorry try again !!")
-        } 
-    }
-    else if (playerSelection == "paper") {
-         if (computerSelection == "rock") {
-         console.log("congratulation the player win !")
-        
-        }else {
-        console.log("sorry try again !!")
-        } 
-    }
-   
- }
-
- const gameChoice = ["rock","paper","scissor"];
- const playerSelection = "rock";
- var computerSelection = gameChoice[Math.floor(Math.random() * gameChoice.length)]; 
- computerSelection = computerSelection.toLowercase();
- playerSelection = playerSelection.toLowerCase();
- console.log(playRound(playerSelection));
-
- playRound();
- 
- function game() {
-    for (let i = 0; i < 5; i++) {
-
-    }
- }
-
-    </script>
+    <p class="credit">Created By Nuyii</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="project.js"></script>
 </body>
 
 </html>
